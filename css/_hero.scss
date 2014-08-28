@@ -1,0 +1,53 @@
+#hero {
+  min-height: 100%;
+  max-height: 1000px;
+  background: url(../images/hero.png) no-repeat bottom center $dribbble;
+  background-size: 100%;
+  color: #fff;
+  @include display-flex;
+  @include flex-props(row, nowrap, center, center, center);
+
+  article {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: .75em;
+
+    p {
+      letter-spacing: 3px;
+      font-weight: 700;
+      margin-bottom: 1.75em;
+    }
+  }
+
+  h1 {
+    display: block;
+    margin: 0 auto;
+    width: 400px;
+    height: 172px;
+    background: url(../images/logo.png) center no-repeat;
+    background-size: 400px;
+    text-indent: -9999px;
+  }
+}
+
+#rsvp {
+  color: $dark;
+  background: $cta;
+  font-weight: 700;
+  font-size: 1.5em;
+  text-decoration: none;
+  padding: 1em 3em;
+  border-radius: 2px;
+  display: inline-block;
+  -webkit-transition: background ease-in-out .15s;
+
+  &:hover {
+    background: lighten($cta, 10%);
+  }
+  &:active {
+    background: darken($cta, 10%);
+  }
+}
