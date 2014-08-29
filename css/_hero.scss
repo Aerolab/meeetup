@@ -8,20 +8,6 @@
   @include display-flex;
   @include flex-props(row, nowrap, center, center, center);
 
-  #hero-bg {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    min-width: 1280px;
-    width: 102%;
-    left: 50%;
-    transform: translateX(-50%);
-
-    background: url(../images/hero.png) no-repeat bottom center $dribbble;
-    background-size: 100%;
-    z-index: -1;
-  }
-
   article {
     position: relative;
     width: 100%;
@@ -51,6 +37,20 @@
     background-size: 100%;
     text-indent: -9999px;
   }
+}
+
+#hero-bg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  min-width: 1280px;
+  width: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  background: url(../images/hero.png) no-repeat bottom center $dribbble;
+  background-size: 100%;
+  z-index: -1;
 }
 
 #rsvp {

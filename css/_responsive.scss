@@ -1,5 +1,11 @@
 @media (max-width: 1280px) {
- #hero {
-  background-size: 1280px;
+ #hero-bg {
+  background-image: url(../images/hero.png);
+ }
+}
+@media (max-width: 720px) {
+ #hero-bg {
+  min-width: 720px;
+  background-image: url(../images/hero-720.png);
  }
 }
