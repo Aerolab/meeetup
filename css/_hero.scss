@@ -1,37 +1,36 @@
 #hero {
   min-height: 100%;
   max-height: 1000px;
-  background: url(../images/hero.png) no-repeat bottom center $dribbble;
-  background-size: 100%;
   color: #fff;
+  position: relative;
+  overflow: hidden;
+  background: url(../images/hero.png) no-repeat bottom center $dribbble;
+  background-size: 102%;
   @include display-flex;
   @include flex-props(row, nowrap, center, center, center);
 
   article {
     width: 100%;
-    max-width: 500px;
+    max-width: 400px;
     margin: 0 auto;
     text-transform: uppercase;
     text-align: center;
     font-size: .75em;
-    padding: 0 2em;
 
     p {
       letter-spacing: 3px;
       font-weight: 700;
       margin-bottom: 1.75em;
-      line-height: 1.3em;
     }
   }
 
   h1 {
     display: block;
     margin: 0 auto;
-    width: 100%;
-    max-width: 400px;
-    padding-top: 43%;
+    width: 400px;
+    height: 172px;
     background: url(../images/logo.png) center no-repeat;
-    background-size: 100%;
+    background-size: 400px;
     text-indent: -9999px;
   }
 }
