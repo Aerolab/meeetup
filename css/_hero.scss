@@ -9,26 +9,29 @@
 
   article {
     width: 100%;
-    max-width: 400px;
+    max-width: 500px;
     margin: 0 auto;
     text-transform: uppercase;
     text-align: center;
     font-size: .75em;
+    padding: 0 2em;
 
     p {
       letter-spacing: 3px;
       font-weight: 700;
       margin-bottom: 1.75em;
+      line-height: 1.3em;
     }
   }
 
   h1 {
     display: block;
     margin: 0 auto;
-    width: 400px;
-    height: 172px;
+    width: 100%;
+    max-width: 400px;
+    padding-top: 43%;
     background: url(../images/logo.png) center no-repeat;
-    background-size: 400px;
+    background-size: 100%;
     text-indent: -9999px;
   }
 }
