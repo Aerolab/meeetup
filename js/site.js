@@ -62,7 +62,6 @@ function updateBackground(offsetFromLeft, smooth) {
 
 }
 
-
 $(document).ready(function() {
   $herobg = $('#hero-bg');
 	$('#hero').mousemove(function(e){
@@ -96,4 +95,17 @@ $(document).ready(function() {
 
     updateBackgroundTweened( offset );
   });
+
+  /*window.loadRSVP = function(response) {
+    var count = response.meta.total_count;
+    console.log(count);
+
+    var assistants = response.results;
+    assistants.forEach(function(rsvp){
+      $("#attendees ul").append("<li>" + rsvp.member.name + "</li>");
+    });
+  }
+
+  $.getScript("http://api.meetup.com/ew/rsvps?event_id=1188322&order=time&photo-host=public&offset=0&format=json&callback=loadRSVP&page=100&sig_id=32218732&sig=60a0d321b3b456c0e5affeeae447dee2e5d80e24");
+*/
 });
