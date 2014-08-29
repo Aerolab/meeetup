@@ -4,12 +4,26 @@
   color: #fff;
   position: relative;
   overflow: hidden;
-  background: url(../images/hero.png) no-repeat bottom center $dribbble;
-  background-size: 102%;
+
   @include display-flex;
   @include flex-props(row, nowrap, center, center, center);
 
+  #hero-bg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    min-width: 1280px;
+    width: 102%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    background: url(../images/hero.png) no-repeat bottom center $dribbble;
+    background-size: 100%;
+    z-index: -1;
+  }
+
   article {
+    position: relative;
     width: 100%;
     max-width: 500px;
     margin: 0 auto;
@@ -17,7 +31,7 @@
     text-align: center;
     font-size: .75em;
     padding: 0 2em;
-
+    z-index: 10;
 
     p {
       letter-spacing: 3px;
@@ -34,7 +48,6 @@
     max-width: 400px;
     padding-top: 43%;
     background: url(../images/logo.png) center no-repeat;
-    background-size: 400px;
     background-size: 100%;
     text-indent: -9999px;
   }

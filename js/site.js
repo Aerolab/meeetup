@@ -1,22 +1,26 @@
 
+var lastBackgroundOffset = 0.5;
+
 function updateBackground(offsetFromLeft) {
 
   var totalWidth = window.innerWidth;
   var minWidth = 1280;
+  var bgWidth = Math.max(totalWidth, minWidth);
 
-  offsetFromLeft *= 2;
+  offsetFromLeft = offsetFromLeft - 0.5;
 
   // The background will be displaced at most by X% of the width
   var displacementPercent = 1 / 100;
   // This is a minimum, mostly for mobile devices
-  var minDisplacement = 15;
+  var minDisplacement = 40;
 
   var maxDisplacement = displacementPercent * totalWidth;
   maxDisplacement = (maxDisplacement < minDisplacement) ? minDisplacement : maxDisplacement;
 
-  var additionalOffset = (totalWidth < minWidth) ? (minWidth - totalWidth) / 2.0 - maxDisplacement : 0.0;
+  var pixelOffset = - offsetFromLeft * maxDisplacement;
+  var percentOffset = (pixelOffset / bgWidth * 100.0) - 50.0;
 
-  $('#hero').css('background-position', (- offsetFromLeft * maxDisplacement - additionalOffset) + 'px ' + '100%');
+  $('#hero-bg').css('transform', 'translateX('+ percentOffset + '%)');
 
 }
 
@@ -33,12 +37,12 @@ $(document).ready(function() {
   });
 
   $(window).resize(function(){
-    //$('#hero')
+    updateBackground(0.5);
   });
 
   window.addEventListener('deviceorientation', function(event){
 
-    var maxRoll = 15;
+    var maxRoll = 30;
     // roll is left-to-right inclination
     roll = event.gamma;
     roll = (roll > maxRoll) ? maxRoll : roll;
