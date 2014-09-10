@@ -2987,11 +2987,3 @@ h2 {
   transform: translateX(-50%);
   background: url(../images/hero.png) no-repeat bottom center #ea4c88;
   z-index: -1; }
-
-@media (max-width: 1280px) {
-  #hero-bg {
-    background-image: url(../images/hero-1280.png); } }
-@media (max-width: 720px) {
-  #hero-bg {
-    min-width: 720px;
-    background-image: url(../images/hero-720.png); } }
