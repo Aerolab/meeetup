@@ -374,31 +374,71 @@ h2
 	margin-left: 11px
 
 	div
-		width: 400px
+		width: 398px
+		height: 298px
 		float: left
 		clear: none
 		box-sizing: border-box
-		padding-right: 2px
-		padding-bottom: 2px
+		margin-right: 2px
+		margin-bottom: 2px
+		position: relative
 
-	img
-		display: block
-		width: 100%
-		height: auto
-		margin: 0
-		box-sizing: border-box
+		img
+			position: absolute
+			display: block
+			width: 100%
+			height: auto
+			margin: 0
+			box-sizing: border-box
+
+		.details
+			display: block
+			width: 100%
+			height: 100%
+			vertical-align: bottom
+			position: absolute
+			padding-bottom: 15px
+			box-sizing: border-box
+			background: #FFF
+			font-size: 24px
+			color: #3e4749
+			text-decoration: none
+			-moz-opacity: 0.00
+			-khtml-opacity: 0.00
+			opacity: 0.00
+			filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0)
+			filter: alpha(opacity=0)
+			transition: opacity .25s ease-in-out
+			-moz-transition: opacity .25s ease-in-out
+			-webkit-transition: opacity .25s ease-in-out
+
+			&:hover
+				-moz-opacity: 0.80
+				-khtml-opacity: 0.80
+				opacity: 0.80
+				filter: progid:DXImageTransform.Microsoft.Alpha(opacity=80)
+				filter: alpha(opacity=80)
+
+			span
+				display: block
+				width: 100%
+				text-align: center
+				position: absolute
+				bottom: 31px
 
 .mainfooter
 	display: block
 	overflow: hidden
-	padding-bottom: 7px
 	text-align: center
-	background: url(../images/footerend.png) center bottom no-repeat
 	margin-top: 149px
-	margin-bottom: 135px
 	float: left
 	clear: both
 	width: 100%
+
+	.contfooter
+		padding-bottom: 7px
+		background: url(../images/footerend.png) center bottom no-repeat
+		margin-bottom: 135px
 
 	img
 		vertical-align: middle
@@ -414,7 +454,8 @@ h2
 	width: 211px
 	height: 211px
 	overflow: hidden
-	margin: 94px 0 0 151px
+	margin: 94px auto 0
+	background: url(../images/piecenter.png) center center no-repeat
 
 .piechart1
 	width: 211px
@@ -431,32 +472,42 @@ h2
 	height: 211px
 	background: url(../images/pieshape3.png) no-repeat
 
-.pielabel1
+.pielabels
 	position: absolute
+	width: 100%
+
+	> div
+		width: 388px
+		margin: 0 auto
+
+.pielabel1
 	width: 114px
 	height: 81px
 	background: url(../images/chartline1.png) right bottom no-repeat
 	color: #ea4c88
-	margin: -52px 0 0 -92px
+	margin: 42px 0 0 -3px
+	float: left
 
 .pielabel2
-	position: absolute
 	width: 123px
 	height: 58px
 	background: url(../images/chartline2.png) left bottom no-repeat
 	color: #be3c6d
 	text-align: right
-	margin: -46px 0 0 173px
+	margin: 47px 0 0 149px
+	float: left
+	clear: none
 
 .pielabel3
-	position: absolute
 	width: 190px
 	height: 16px
 	padding-top: 54px
 	background: url(../images/chartline3.png) center top no-repeat
 	color: #eee165
 	text-align: center
-	margin: 220px 0 0 12px
+	margin: 189px 0 0 103px
+	float: left
+	clear: both
 
 
 #hero-bg

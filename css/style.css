@@ -328,30 +328,66 @@ h2 {
 .dribbbleshots {
   margin-left: 11px; }
   .dribbbleshots div {
-    width: 400px;
+    width: 398px;
+    height: 298px;
     float: left;
     clear: none;
     box-sizing: border-box;
-    padding-right: 2px;
-    padding-bottom: 2px; }
-  .dribbbleshots img {
-    display: block;
-    width: 100%;
-    height: auto;
-    margin: 0;
-    box-sizing: border-box; }
+    margin-right: 2px;
+    margin-bottom: 2px;
+    position: relative; }
+    .dribbbleshots div img {
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: auto;
+      margin: 0;
+      box-sizing: border-box; }
+    .dribbbleshots div .details {
+      display: block;
+      width: 100%;
+      height: 100%;
+      vertical-align: bottom;
+      position: absolute;
+      padding-bottom: 15px;
+      box-sizing: border-box;
+      background: white;
+      font-size: 24px;
+      color: #3e4749;
+      text-decoration: none;
+      -moz-opacity: 0;
+      -khtml-opacity: 0;
+      opacity: 0;
+      filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0);
+      filter: alpha(opacity=0);
+      transition: opacity 0.25s ease-in-out;
+      -moz-transition: opacity 0.25s ease-in-out;
+      -webkit-transition: opacity 0.25s ease-in-out; }
+      .dribbbleshots div .details:hover {
+        -moz-opacity: 0.8;
+        -khtml-opacity: 0.8;
+        opacity: 0.8;
+        filter: progid:DXImageTransform.Microsoft.Alpha(opacity=80);
+        filter: alpha(opacity=80); }
+      .dribbbleshots div .details span {
+        display: block;
+        width: 100%;
+        text-align: center;
+        position: absolute;
+        bottom: 31px; }
 
 .mainfooter {
   display: block;
   overflow: hidden;
-  padding-bottom: 7px;
   text-align: center;
-  background: url(../images/footerend.png) center bottom no-repeat;
   margin-top: 149px;
-  margin-bottom: 135px;
   float: left;
   clear: both;
   width: 100%; }
+  .mainfooter .contfooter {
+    padding-bottom: 7px;
+    background: url(../images/footerend.png) center bottom no-repeat;
+    margin-bottom: 135px; }
   .mainfooter img {
     vertical-align: middle;
     margin: 0 22px; }
@@ -2756,14 +2792,21 @@ h2 {
     height: auto; }
     .participants .avatars {
       width: 100%;
-      height: auto; }
+      height: 516px; }
 
   .remaining {
     font-size: 24px; } }
 @media(max-width: 1236px) {
+  .dribbbleshots {
+    margin-left: 0; }
+
   .dribbbleshots div {
-    width: 50%;
-    height: auto; } }
+    width: calc(50% - 2px);
+    height: 0;
+    padding-bottom: 37.35%; }
+
+  .participants .avatars {
+    height: 430px; } }
 @media(max-width: 1219px) {
   .reasons .contreasons {
     width: 100%;
@@ -2778,7 +2821,7 @@ h2 {
     font-size: 19px; }
 
   .floatgroup, .reasons67and8 {
-    width: calc(100% + 22px); }
+    width: 100%; }
 
   .reason {
     margin-right: 0;
@@ -2789,18 +2832,36 @@ h2 {
     margin-right: 0;
     margin-left: 0; }
 
-  .reasons .reason2 {
-    margin-left: 0; }
+  .reasons .reason2, .reasons .reason6 {
+    margin-left: 0;
+    width: calc(50% - 11px); }
+
+  .reasons .reason3, .reasons .reason7 {
+    margin-right: 0;
+    width: calc(50% - 11px); }
 
   .reasons .reason4 {
-    margin-left: 0; }
+    float: left;
+    clear: none;
+    margin-left: 0;
+    width: calc(50% - 11px); }
 
   .reasons .reason5 {
     float: left;
-    clear: none; }
+    clear: none;
+    margin-right: 0;
+    width: calc(50% - 11px);
+    height: 422px; }
+    .reasons .reason5 .bars {
+      width: 100%; }
+    .reasons .reason5 img {
+      display: block;
+      margin: 0 auto 20px;
+      float: none; }
 
-  .reasons .reason2, .reasons .reason3, .reasons .reason4, .reasons .reason5, .reasons .reason6, .reasons .reason7, .reasons .reason8 {
-    width: calc(50% - 22px); } }
+  .reasons .reason8 {
+    width: 100%;
+    margin-left: 0; } }
 @media(max-width: 1190px) {
   .reasons .reason5 .bars {
     width: 100%; }
@@ -2810,7 +2871,10 @@ h2 {
     float: none; }
 
   .reasons .reason1 {
-    font-size: 22px; } }
+    font-size: 22px; }
+
+  .participants .avatars {
+    height: 344px; } }
 @media(max-width: 799px) {
   .floatgroup, .reasons67and8 {
     width: 100%; }
@@ -2820,7 +2884,9 @@ h2 {
     margin-bottom: 22px; }
 
   .reasons .reason1, .reasons .reason2, .reasons .reason3, .reasons .reason4, .reasons .reason5, .reasons .reason6, .reasons .reason7, .reasons .reason8 {
-    width: 100%; }
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0; }
 
   .map {
     width: 100%;
@@ -2836,16 +2902,16 @@ h2 {
   .mainfooter img {
     display: block;
     margin: 0 auto 25px; } }
+@media(max-width: 684px) {
+  .dribbbleshots div {
+    width: 100%;
+    padding-bottom: 74.85%; } }
 @media(max-width: 668px) {
   .map img {
     width: 100%;
     height: auto; }
 
   .participants {
-    width: 100%;
-    height: auto; }
-
-  .dribbbleshots div {
     width: 100%;
     height: auto; } }
 @media(max-width: 464px) {
@@ -2856,7 +2922,8 @@ h2 {
   width: 211px;
   height: 211px;
   overflow: hidden;
-  margin: 94px 0 0 151px; }
+  margin: 94px auto 0;
+  background: url(../images/piecenter.png) center center no-repeat; }
 
 .piechart1 {
   width: 211px;
@@ -2873,32 +2940,41 @@ h2 {
   height: 211px;
   background: url(../images/pieshape3.png) no-repeat; }
 
-.pielabel1 {
+.pielabels {
   position: absolute;
+  width: 100%; }
+  .pielabels > div {
+    width: 388px;
+    margin: 0 auto; }
+
+.pielabel1 {
   width: 114px;
   height: 81px;
   background: url(../images/chartline1.png) right bottom no-repeat;
   color: #ea4c88;
-  margin: -52px 0 0 -92px; }
+  margin: 42px 0 0 -3px;
+  float: left; }
 
 .pielabel2 {
-  position: absolute;
   width: 123px;
   height: 58px;
   background: url(../images/chartline2.png) left bottom no-repeat;
   color: #be3c6d;
   text-align: right;
-  margin: -46px 0 0 173px; }
+  margin: 47px 0 0 149px;
+  float: left;
+  clear: none; }
 
 .pielabel3 {
-  position: absolute;
   width: 190px;
   height: 16px;
   padding-top: 54px;
   background: url(../images/chartline3.png) center top no-repeat;
   color: #eee165;
   text-align: center;
-  margin: 220px 0 0 12px; }
+  margin: 189px 0 0 103px;
+  float: left;
+  clear: both; }
 
 #hero-bg {
   position: absolute;

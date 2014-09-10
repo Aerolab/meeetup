@@ -17,15 +17,22 @@
 
 		.avatars
 			width: 100%
-			height: auto
+			height: 516px
 
 	.remaining
 		font-size: 24px
 
 @media(max-width: 1236px)
+	.dribbbleshots
+		margin-left: 0
+
 	.dribbbleshots div
-		width: 50%
-		height: auto
+		width: calc(50% - 2px)
+		height: 0
+		padding-bottom: 37.35%
+
+	.participants .avatars
+		height: 430px
 
 @media(max-width: 1219px)
 	.reasons .contreasons
@@ -41,7 +48,7 @@
 		font-size: 19px
 
 	.floatgroup, .reasons67and8
-		width: calc(100% + 22px)
+		width: 100%
 
 	.reason
 		margin-right: 0
@@ -52,18 +59,38 @@
 		margin-right: 0
 		margin-left: 0
 
-	.reasons .reason2
+	.reasons .reason2, .reasons .reason6
 		margin-left: 0
+		width: calc(50% - 11px)
+
+	.reasons .reason3, .reasons .reason7
+		margin-right: 0
+		width: calc(50% - 11px)
 
 	.reasons .reason4
+		float: left
+		clear: none
 		margin-left: 0
+		width: calc(50% - 11px)
 
 	.reasons .reason5
 		float: left
 		clear: none
+		margin-right: 0
+		width: calc(50% - 11px)
+		height: 422px
 
-	.reasons .reason2, .reasons .reason3, .reasons .reason4, .reasons .reason5, .reasons .reason6, .reasons .reason7, .reasons .reason8
-		width: calc(50% - 22px)
+		.bars
+			width: 100%
+
+		img
+			display: block
+			margin: 0 auto 20px
+			float: none
+
+	.reasons .reason8
+		width: 100%
+		margin-left: 0
 
 @media(max-width: 1190px)
 	.reasons .reason5
@@ -78,6 +105,9 @@
 	.reasons .reason1
 		font-size: 22px
 
+	.participants .avatars
+		height: 344px
+
 @media(max-width: 799px)
 	.floatgroup, .reasons67and8
 		width: 100%
@@ -88,6 +118,8 @@
 
 	.reasons .reason1, .reasons .reason2, .reasons .reason3, .reasons .reason4, .reasons .reason5, .reasons .reason6, .reasons .reason7, .reasons .reason8
 		width: 100%
+		margin-left: 0
+		margin-right: 0
 
 	.map
 		width: 100%
@@ -105,16 +137,17 @@
 		display: block
 		margin: 0 auto 25px
 
+@media(max-width: 684px)
+	.dribbbleshots div
+		width: 100%
+		padding-bottom: 74.85%
+
 @media(max-width: 668px)
 	.map img
 		width: 100%
 		height: auto
 
 	.participants
-		width: 100%
-		height: auto
-
-	.dribbbleshots div
 		width: 100%
 		height: auto
 
