@@ -137,7 +137,8 @@ h2 {
     float: left;
     clear: none;
     margin: 0 11px 22px;
-    letter-spacing: 3px; }
+    letter-spacing: 3px;
+    overflow: hidden; }
     .reasons .reason strong {
       font-weight: 700;
       color: #ea4c88; }
@@ -320,8 +321,8 @@ h2 {
   font-weight: 400;
   color: #3e4749;
   font-size: 34px;
-  height: 145px;
-  line-height: 145px; }
+  box-sizing: border-box;
+  padding: 51px 10px; }
   .remaining strong {
     color: #ea4c88;
     font-weight: 700; }
@@ -2889,6 +2890,15 @@ h2 {
     margin-left: 0;
     margin-right: 0; }
 
+  .reasons .reason1 {
+    height: auto;
+    line-height: normal;
+    padding-top: 76px;
+    padding-bottom: 50px; }
+
+  .reasons .reason5 {
+    height: auto; }
+
   .map {
     width: 100%;
     height: auto; }
@@ -2918,7 +2928,22 @@ h2 {
 @media(max-width: 464px) {
   .logo {
     width: 100%;
+    height: auto; }
+
+  .reasons .reason4 {
+    zoom: 75%;
+    padding-bottom: 25%;
     height: auto; } }
+@media(max-width: 320px) {
+  .participants .avatars {
+    height: 400px; }
+
+  .participants li, .participants .mem-photo-small {
+    width: 79px;
+    height: 79px; }
+
+  .participants img {
+    width: 79px; } }
 .contentpie {
   width: 211px;
   height: 211px;
@@ -2943,7 +2968,8 @@ h2 {
 
 .pielabels {
   position: absolute;
-  width: 100%; }
+  width: 100%;
+  overflow: hidden; }
   .pielabels > div {
     width: 388px;
     margin: 0 auto; }
