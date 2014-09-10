@@ -145,7 +145,8 @@ h2 {
     width: 686px;
     height: 180px;
     line-height: 180px;
-    font-size: 30px; }
+    font-size: 30px;
+    letter-spacing: normal; }
     .reasons .reason1 img {
       vertical-align: middle; }
     .reasons .reason1 strong {
