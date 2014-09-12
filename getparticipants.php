@@ -39,6 +39,7 @@
 		$avatars = preg_replace("/[\r\n]+/", "\n", $avatars);
 
 		$initialavailable = 100;
+		if ($going > $initialavailable) $going = $initialavailable;
 
 		$percentualGoing = floor(($going*100)/$initialavailable);
 		echo $percentualGoing.'__[cc]__'.$going.'__[cc]__'.$avatars;
