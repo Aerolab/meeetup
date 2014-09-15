@@ -125,13 +125,13 @@ function updateBackground(offsetFromLeft, smooth) {
   var percentOffset = (pixelOffset / bgWidth * 100.0) - 50.0;
 
 
-  $herobg.css('transform', 'translateX('+ percentOffset + '%)');
+  $herobg.css('transform', 'translateX('+percentOffset+'%)');
 
 }
 
 $(document).ready(function() {
   $herobg = $('#hero-bg');
-	$('#hero').mousemove(function(e){
+	$('#hero').mousemove(function(e) {
 
     disableAccelerometer = true;
 
@@ -147,20 +147,23 @@ $(document).ready(function() {
     updateBackground(0.5);
   });
 
+  window.addEventListener('deviceorientation', function(event) {
 
-  window.addEventListener('deviceorientation', function(event){
-
-    if( disableAccelerometer ){ return; }
+    if (disableAccelerometer){ return; }
 
     var maxRoll = 45;
     // roll is left-to-right inclination
-    roll = event.gamma;
+		if (window.innerHeight > window.innerWidth){
+			roll = event.gamma;
+		} else {
+			roll = event.beta;
+		}
     roll = (roll > maxRoll) ? maxRoll : roll;
     roll = (roll < -maxRoll) ? -maxRoll : roll;
 
     var offset = (roll + maxRoll) / maxRoll / 2.0;
 
-    updateBackgroundTweened( offset );
+    updateBackgroundTweened(offset);
   });
 
   /*window.loadRSVP = function(response) {
